@@ -4,8 +4,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "start": "npm install && node server",
-    "build": "cd client && npm run build",
+    "start": "cd client && npm run build && cd ../ && node server",
     "test": "echo something"
   },
   "repository": {
