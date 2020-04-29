@@ -8,10 +8,11 @@ const PORT = process.env.PORT || 5002;
 //   res.send("hello from server");
 // });
 
-app.use(express.static("./client/build/"));
+app.use(express.static("client/build/index.html", { root: __dirname }));
 
 app.get("*", (req, res) => {
-  res.sendFile("client/build/index.html", { root: __dirname });
+  // res.sendFile("client/build/index.html", { root: __dirname });
+  res.send("default page");
 });
 
 app.listen(PORT, () => {
