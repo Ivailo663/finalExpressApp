@@ -7,7 +7,7 @@ dotenv.config({ path: "./config.env" });
 
 const PORT = process.env.PORT || 5002;
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static("./client/build/"));
   app.get("*", (req, res) => {
     res.sendFile("index.html", {
